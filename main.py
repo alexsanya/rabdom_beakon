@@ -4,4 +4,5 @@ app = FastAPI()
 
 @app.post("/getPayload/{size:int}")
 def get_payload(size: int):
-    return {"data": 'z'*size}
+    one_megabyte = 'x'*10**6
+    return {"data": one_megabyte*size}
